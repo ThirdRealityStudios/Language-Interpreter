@@ -1,3 +1,4 @@
+import net.Link;
 import net.NetFactory;
 import net.Node;
 
@@ -10,6 +11,8 @@ public class Bot<T>
         NetFactory<T> factory = new NetFactory<T>();
 
         ArrayList<Node<T>> nodes = factory.produceSequences(data);
+
+        nodes.get(2).add(new Link<T>(nodes.get(0)));
 
         print(nodes);
     }

@@ -54,11 +54,11 @@ public class Node<T>
     @Override
     public String toString()
     {
-        String info = data.toString();
+        String info = data.toString() + "\n";
 
         for(Link l : links)
         {
-            info += " " + l.toString();
+            info += " " + l.toString() + "\n";
         }
 
         return info;
