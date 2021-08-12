@@ -15,6 +15,11 @@ public class Node<T>
         links = new ArrayList<Link>();
     }
 
+    public T getData()
+    {
+        return data;
+    }
+
     private void merge(Link<T> unmerged, Link<T> existing)
     {
         Node<T> unmergedNode = unmerged.getDestination();
@@ -44,5 +49,18 @@ public class Node<T>
 
             merge(link, existing);
         }
+    }
+
+    @Override
+    public String toString()
+    {
+        String info = data.toString();
+
+        for(Link l : links)
+        {
+            info += " " + l.toString();
+        }
+
+        return info;
     }
 }

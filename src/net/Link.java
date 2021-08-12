@@ -36,4 +36,10 @@ public class Link<T>
     {
         return ((Link<T>) o).getDestination().equals(getDestination());
     }
+
+    @Override
+    public String toString()
+    {
+        return "-> " + destination.getData();
+    }
 }
